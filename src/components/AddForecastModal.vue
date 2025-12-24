@@ -2,6 +2,7 @@
   <div class="modal" :class="{ 'is-active': isActive }">
     <div class="modal-background" @click="$emit('close')"></div>
     <div class="modal-card">
+        <Notification/>
       <header class="modal-card-head">
         <p class="modal-card-title">Add Weather Forecast</p>
         <button class="delete" @click="$emit('close')"></button>
@@ -124,6 +125,7 @@
 import { ref, computed } from 'vue'
 import { getWeatherByCity, getWeatherByZip, getWeatherByCoordinates } from '../services/weatherApi'
 import { useNotification } from '../composables/useNotification'
+import Notification from './Notification.vue'
 
 const props = defineProps({
   isActive: { type: Boolean, default: false }

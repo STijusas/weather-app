@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Notification />
     
     <section class="hero is-primary">
       <div class="hero-body has-background-link">
